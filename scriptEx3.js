@@ -8,6 +8,7 @@ itensMenu.forEach((item) => item.classList.add("ativo"));
 // Remove a classe ativo de todos os itens do menu e mantenha apenas no primeiro
 
 itensMenu.forEach((item) => item.classList.remove("ativo"));
+itensMenu[0].classList.add("ativo");
 
 // Verifique se as imagens possuem o atributo alt
 
@@ -21,8 +22,10 @@ imagens.forEach((item, index) => {
 
 // Modifique o href do link externo no menu
 
-const linkExterno = document.querySelector('.menu ul li [href^="https"]');
+const linkExterno = document.querySelector('.menu ul li [href^="http"]');
 
-linkExterno.href = "https://google.com";
+// linkExterno.href = "https://google.com";
+
+linkExterno.setAttribute("href", "https://www.google.com/");
 
 console.log(linkExterno.attributes.href);
